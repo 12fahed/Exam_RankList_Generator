@@ -26,6 +26,9 @@ public class MHTCETGuiApp extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         
+        // Force button text rendering
+        UIManager.put("Button.select", new Color(70, 130, 180));
+        
         initializeComponents();
         setupLayout();
         
@@ -93,6 +96,9 @@ public class MHTCETGuiApp extends JFrame {
         uploadButton.setFont(new Font("Arial", Font.BOLD, 14));
         uploadButton.setBackground(new Color(52, 152, 219));
         uploadButton.setForeground(Color.WHITE);
+        uploadButton.setOpaque(true);
+        uploadButton.setBorderPainted(false);
+        uploadButton.setContentAreaFilled(true);
         uploadButton.setFocusPainted(false);
         uploadButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         uploadButton.addActionListener(e -> handleFileUpload());
@@ -101,6 +107,9 @@ public class MHTCETGuiApp extends JFrame {
         templateButton.setFont(new Font("Arial", Font.PLAIN, 12));
         templateButton.setBackground(new Color(46, 204, 113));
         templateButton.setForeground(Color.WHITE);
+        templateButton.setOpaque(true);
+        templateButton.setBorderPainted(false);
+        templateButton.setContentAreaFilled(true);
         templateButton.setFocusPainted(false);
         templateButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         templateButton.addActionListener(e -> downloadTemplate());
@@ -172,6 +181,9 @@ public class MHTCETGuiApp extends JFrame {
         processButton.setFont(new Font("Arial", Font.BOLD, 14));
         processButton.setBackground(new Color(46, 204, 113));
         processButton.setForeground(Color.WHITE);
+        processButton.setOpaque(true);
+        processButton.setBorderPainted(false);
+        processButton.setContentAreaFilled(true);
         processButton.setFocusPainted(false);
         processButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         processButton.setEnabled(false);
@@ -181,6 +193,9 @@ public class MHTCETGuiApp extends JFrame {
         clearButton.setFont(new Font("Arial", Font.PLAIN, 14));
         clearButton.setBackground(new Color(231, 76, 60));
         clearButton.setForeground(Color.WHITE);
+        clearButton.setOpaque(true);
+        clearButton.setBorderPainted(false);
+        clearButton.setContentAreaFilled(true);
         clearButton.setFocusPainted(false);
         clearButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         clearButton.addActionListener(e -> clearAll());

@@ -82,7 +82,27 @@ public class ResultPanel extends JFrame {
         header.setFont(new Font("Arial", Font.BOLD, 12));
         header.setBackground(new Color(52, 152, 219));
         header.setForeground(Color.WHITE);
+        header.setOpaque(true);
         header.setPreferredSize(new Dimension(header.getWidth(), 35));
+        
+        // Create custom header renderer with white text on blue
+        DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer() {
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value,
+                    boolean isSelected, boolean hasFocus, int row, int column) {
+                Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                c.setBackground(new Color(52, 152, 219));
+                c.setForeground(Color.WHITE);
+                setFont(new Font("Arial", Font.BOLD, 12));
+                setHorizontalAlignment(SwingConstants.CENTER);
+                return c;
+            }
+        };
+        
+        // Apply custom renderer to all columns
+        for (int i = 0; i < resultTable.getColumnCount(); i++) {
+            resultTable.getColumnModel().getColumn(i).setHeaderRenderer(headerRenderer);
+        }
         
         // Add zebra striping
         resultTable.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
@@ -130,6 +150,9 @@ public class ResultPanel extends JFrame {
         exportButton.setFont(new Font("Arial", Font.BOLD, 14));
         exportButton.setBackground(new Color(52, 152, 219));
         exportButton.setForeground(Color.WHITE);
+        exportButton.setOpaque(true);
+        exportButton.setBorderPainted(false);
+        exportButton.setContentAreaFilled(true);
         exportButton.setFocusPainted(false);
         exportButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         exportButton.addActionListener(e -> exportResults());
@@ -138,6 +161,9 @@ public class ResultPanel extends JFrame {
         printButton.setFont(new Font("Arial", Font.BOLD, 14));
         printButton.setBackground(new Color(155, 89, 182));
         printButton.setForeground(Color.WHITE);
+        printButton.setOpaque(true);
+        printButton.setBorderPainted(false);
+        printButton.setContentAreaFilled(true);
         printButton.setFocusPainted(false);
         printButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         printButton.addActionListener(e -> printResults());
@@ -145,7 +171,10 @@ public class ResultPanel extends JFrame {
         JButton statsButton = new JButton("View Statistics");
         statsButton.setFont(new Font("Arial", Font.BOLD, 14));
         statsButton.setBackground(new Color(241, 196, 15));
-        statsButton.setForeground(Color.WHITE);
+        statsButton.setForeground(Color.BLACK);
+        statsButton.setOpaque(true);
+        statsButton.setBorderPainted(false);
+        statsButton.setContentAreaFilled(true);
         statsButton.setFocusPainted(false);
         statsButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         statsButton.addActionListener(e -> showStatistics());
@@ -154,6 +183,9 @@ public class ResultPanel extends JFrame {
         closeButton.setFont(new Font("Arial", Font.PLAIN, 14));
         closeButton.setBackground(new Color(231, 76, 60));
         closeButton.setForeground(Color.WHITE);
+        closeButton.setOpaque(true);
+        closeButton.setBorderPainted(false);
+        closeButton.setContentAreaFilled(true);
         closeButton.setFocusPainted(false);
         closeButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
         closeButton.addActionListener(e -> dispose());
