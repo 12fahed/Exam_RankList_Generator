@@ -1,6 +1,6 @@
 # MHT-CET Merit List Generator
 
-## : GUI Version Available!
+<img src="./images/2.png">
 
 This project now includes **two versions**:
 
