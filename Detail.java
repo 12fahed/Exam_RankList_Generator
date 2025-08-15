@@ -15,9 +15,11 @@ public class Detail {
     private HSCDetails hsc;
     private float hsc_per;
     private float hsc_pcm;
+    private float hsc_pcm_per;
     private MHTCETDetails mhtcet;
     private DOB dob;
     private MHTCETPercentileDetails per;
+    private int rank;
     private int no; // Test purpose
     
     public long getEN() {
@@ -186,5 +188,21 @@ public class Detail {
     
     public void setPwd_def(String pwd_def) {
         this.pwd_def = pwd_def;
+    }
+    
+    public float getHsc_pcm_per() {
+        return hsc_pcm_per;
+    }
+    
+    public void setHsc_pcm_per(float hsc_pcm_per) {
+        this.hsc_pcm_per = hsc_pcm_per;
+    }
+    
+    public int getRank() {
+        return rank;
+    }
+    
+    public void setRank(int rank) {
+        this.rank = rank;
     }
 }

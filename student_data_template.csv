@@ -1,0 +1,6 @@
+EN_Number,Name,Contact,Email,Category,Gender,PWD_DEF,EWS,TFWS,Orphan,Minority,SSC_English,SSC_Maths,SSC_Science,SSC_SocialStudies,SSC_Hindi,SSC_Marathi,HSC_English,HSC_Physics,HSC_Chemistry,HSC_Maths,HSC_Biology,MHTCET_Physics,MHTCET_Chemistry,MHTCET_Maths,DOB_Day,DOB_Month,DOB_Year
+12345678,Sharma_Raj_Kumar,9876543210,raj.sharma@email.com,Open,Male,No,No,No,No,None,85.5,90.0,88.5,82.0,78.5,80.0,75.0,80.5,78.0,85.5,72.0,45.5,48.0,49.5,15,8,2005
+23456789,Patil_Priya_Ramesh,9876543211,priya.patil@email.com,OBC,Female,No,No,Yes,No,None,92.0,88.5,90.0,85.5,80.0,82.5,82.0,85.0,83.5,88.0,79.5,47.0,49.5,48.5,22,3,2006
+34567890,Khan_Arif_Mohammed,9876543212,arif.khan@email.com,SC,Male,No,Yes,No,No,Religious Minority,80.0,85.5,83.0,78.5,75.0,77.0,78.5,82.0,80.0,84.5,76.0,44.5,47.0,48.0,10,12,2005
+45678901,Deshmukh_Anjali_Prakash,9876543213,anjali.deshmukh@email.com,Open,Female,No,No,Yes,No,None,88.0,91.5,87.0,83.5,79.0,81.0,80.0,84.0,82.5,87.0,78.0,46.5,48.5,49.0,5,6,2005
+56789012,Joshi_Amit_Suresh,9876543214,amit.joshi@email.com,Open,Male,No,No,No,No,None,87.5,89.0,86.5,81.0,77.5,79.5,77.0,81.5,79.5,86.0,74.5,45.0,47.5,48.5,18,9,2006

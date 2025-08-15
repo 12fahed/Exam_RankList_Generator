@@ -1,5 +1,36 @@
 # MHT-CET Merit List Generator
 
+## : GUI Version Available!
+
+This project now includes **two versions**:
+
+### **GUI Version (Recommended)**
+- **Interactive graphical interface**
+- **CSV file upload** for bulk processing
+- **Automated processing pipeline**
+- **Beautiful results table** with export/print options
+- **Statistics dashboard**
+
+**To run GUI version:**
+```powershell
+# Double-click run_gui.bat OR:
+javac *.java
+java MHTCETGuiApp
+```
+
+### **Console Version (Original)**
+- Command-line interface
+- Manual data entry for each student
+- Real-time validation and feedback
+
+**To run console version:**
+```powershell
+javac *.java
+java Rank
+```
+
+---
+
 ## Project Overview
 
 This Java application generates a merit list for students based on their MHT-CET (Maharashtra Health and Technical Common Entrance Test) scores, along with their SSC and HSC academic records. The system collects comprehensive student data, calculates percentiles, and ranks students according to a complex merit calculation algorithm.
